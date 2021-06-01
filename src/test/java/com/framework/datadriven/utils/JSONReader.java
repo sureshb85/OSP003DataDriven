@@ -6,7 +6,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-
 public class JSONReader {
 	private static final String EMPLOYEEJSONFILE = System.getProperty("user.dir") + "\\testdata\\user.json";
 	static JSONArray details;
