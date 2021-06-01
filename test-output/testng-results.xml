@@ -1,79 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-01T14:09:56 IST" name="Default suite" finished-at="2021-06-01T14:10:15 IST" duration-ms="18651">
+  <suite started-at="2021-06-01T16:42:22 IST" name="Default suite" finished-at="2021-06-01T16:42:36 IST" duration-ms="13953">
     <groups>
     </groups>
-    <test started-at="2021-06-01T14:09:56 IST" name="Default test" finished-at="2021-06-01T14:10:15 IST" duration-ms="18651">
-      <class name="com.framework.datadriven.tests.HomeTestExcelDataMapExample">
-        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:09:57 IST" name="startTest" finished-at="2021-06-01T14:10:03 IST" duration-ms="5710" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.framework.datadriven.tests.HomeTestExcelDataMapExample.signUpDataProviderTest(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-06-01T16:42:22 IST" name="Default test" finished-at="2021-06-01T16:42:36 IST" duration-ms="13953">
+      <class name="com.framework.datadriven.utils.XMLSeleniumTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.framework.datadriven.utils.XMLSeleniumTest@50ad3bc1]" started-at="2021-06-01T16:42:22 IST" name="setup" finished-at="2021-06-01T16:42:27 IST" duration-ms="5146" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method signature="signUpDataProviderTest(java.util.Map)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:10:03 IST" name="signUpDataProviderTest" description="Sign up test case validation with data provider" data-provider="xlsSignUpData" finished-at="2021-06-01T14:10:06 IST" duration-ms="3029" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{zip=560101, firstName=Java, lastName=Selenium, country=world, phone=9845012345, address2=open source, city=everywhere, address1=apache, state=anywhere, email=java@selenium.com}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setup -->
+        <test-method signature="testShopify()[pri:0, instance:com.framework.datadriven.utils.XMLSeleniumTest@50ad3bc1]" started-at="2021-06-01T16:42:27 IST" name="testShopify" finished-at="2021-06-01T16:42:35 IST" duration-ms="7856" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUpDataProviderTest -->
-        <test-method is-config="true" signature="closeTest(org.testng.ITestResult)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:10:06 IST" name="closeTest" finished-at="2021-06-01T14:10:07 IST" duration-ms="1394" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signUpDataProviderTest status=SUCCESS method=HomeTestExcelDataMapExample.signUpDataProviderTest(java.util.Map)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testShopify -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.framework.datadriven.utils.XMLSeleniumTest@50ad3bc1]" started-at="2021-06-01T16:42:35 IST" name="teardown" finished-at="2021-06-01T16:42:36 IST" duration-ms="885" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeTest -->
-        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:10:07 IST" name="startTest" finished-at="2021-06-01T14:10:11 IST" duration-ms="4144" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.framework.datadriven.tests.HomeTestExcelDataMapExample.signUpDataProviderTest(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method signature="signUpDataProviderTest(java.util.Map)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:10:11 IST" name="signUpDataProviderTest" description="Sign up test case validation with data provider" data-provider="xlsSignUpData" finished-at="2021-06-01T14:10:14 IST" duration-ms="2659" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{zip=560101, firstName=Python, lastName=Selenium, country=world, phone=9845012345, address2=open source, city=everywhere, address1=apache, state=anywhere, email=java@selenium.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpDataProviderTest -->
-        <test-method is-config="true" signature="closeTest(org.testng.ITestResult)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47]" started-at="2021-06-01T14:10:14 IST" name="closeTest" finished-at="2021-06-01T14:10:15 IST" duration-ms="1050" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signUpDataProviderTest status=SUCCESS method=HomeTestExcelDataMapExample.signUpDataProviderTest(java.util.Map)[pri:0, instance:com.framework.datadriven.tests.HomeTestExcelDataMapExample@5d908d47] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- com.framework.datadriven.tests.HomeTestExcelDataMapExample -->
+        </test-method> <!-- teardown -->
+      </class> <!-- com.framework.datadriven.utils.XMLSeleniumTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
