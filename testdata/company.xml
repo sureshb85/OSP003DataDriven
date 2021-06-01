@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Extensible Markup Language -->
+<!-- [CDATA Sections] -->
 <company>
 	<staff id="1001">
 		<firstname>John</firstname>

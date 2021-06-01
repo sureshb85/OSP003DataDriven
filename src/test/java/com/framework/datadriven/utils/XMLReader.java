@@ -48,7 +48,7 @@ public class XMLReader {
 		document.getDocumentElement().normalize();
 
 		Element root = document.getDocumentElement();
-		System.out.println(root.getNodeName());
+		System.out.println("root: " + root.getNodeName());
 
 		NodeList list = document.getElementsByTagName(tagName);
 

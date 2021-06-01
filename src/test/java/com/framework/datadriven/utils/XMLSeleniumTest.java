@@ -32,7 +32,7 @@ public class XMLSeleniumTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testCompanyOffersDiscount() throws Exception {
 		readXmlData(COMPANYXMLFILE);
 		driver.get("https://webapps.tekstac.com/CompanyOffersDiscount");
@@ -43,7 +43,7 @@ public class XMLSeleniumTest {
 		Thread.sleep(5000);
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void testShopify() throws Exception {
 		readXmlData(USERXMLFILE);
 		driver.get("http://webapps.tekstac.com/Shopify");
