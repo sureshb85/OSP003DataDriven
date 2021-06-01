@@ -2,9 +2,10 @@ package com.framework.datadriven.utils;
 
 import java.io.FileReader;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
 
 public class JSONReader {
 	private static final String EMPLOYEEJSONFILE = System.getProperty("user.dir") + "\\testdata\\user.json";
