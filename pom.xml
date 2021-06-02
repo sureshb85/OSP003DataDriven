@@ -5,6 +5,12 @@
 	<groupId>com.framework.datadriven</groupId>
 	<artifactId>OSP003DataDriven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<jre.level>1.8</jre.level>
+		<jdk.level>1.8</jdk.level>
+	</properties>
+
 	<dependencies><!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -54,4 +60,116 @@
 		</dependency>
 
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}</directory>
+							<includes>
+								<include>**/test-output/**</include>
+								<include>**/reports/**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jre.level}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>Regression</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M5</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>regression_testng.xml
+									</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>FishTest</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M5</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>fishtest.xml
+									</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>Smoke</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M5</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>smoke_testng.xml
+									</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>Rerun</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M5</version>
+							<configuration>
+								<directory>${basedir}</directory>
+								<suiteXmlFiles>
+									<suiteXmlFile>${basedir}\target\surefire-reports\testng-failed.xml
+									</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 </project>

@@ -12,7 +12,7 @@ import com.framework.datadriven.utils.XLSReader;
 
 public class HomeTestExcelDataMapExample extends BaseTest {
 
-	@Test(enabled = true, dataProvider = "xlsSignUpData", description = "Sign up test case validation with data provider")
+	@Test(groups = "regression", enabled = true, dataProvider = "xlsSignUpData", description = "Sign up test case validation with data provider")
 	public void signUpDataProviderTest(Map<Object, Object> excelDataMap) throws IOException {
 		String firstNameData = (String) excelDataMap.get("firstName");
 		String lastNameData = (String) excelDataMap.get("lastName");

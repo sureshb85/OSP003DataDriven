@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
 	String lastName = "account.lastName";
 	String email = "account.email";
 	String phone = "account.phone";
-	String address1 = "account.address";
+	String address1 = "account.address1";
 	String city = "account.city";
 	String address2 = "account.address2";
 	String state = "account.state";
