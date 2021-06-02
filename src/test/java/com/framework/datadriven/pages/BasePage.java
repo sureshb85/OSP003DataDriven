@@ -82,4 +82,24 @@ public class BasePage {
 		return screenShotLoc;
 	}
 
+	public String getTitle() {
+		return driver.getTitle();
+	}
+
+	public String getText(By by) {
+		WebElement element = null;
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+			element = getWebElement(by);
+			System.out.println("element found: " + "<" + by.toString() + ">");
+			System.out.println("element text: " + "<" + by.toString() + ">\t" + element.getText());
+			return element.getText();
+
+		} catch (Exception e) {
+			System.out.println("Unable to find the element using the By locator: " + e.getMessage());
+			Assert.fail("Unable to find the element using the By locator: " + "<" + by.toString() + ">");
+		}
+		return "";
+	}
+
 }
