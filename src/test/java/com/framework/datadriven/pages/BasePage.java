@@ -68,6 +68,16 @@ public class BasePage {
 		}
 	}
 
+	public void waitAndClickElement(WebElement element) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+			System.out.println("clicked on element: " + "<" + element.toString() + ">");
+		} catch (Exception e) {
+			System.out.println("Unable to click on the element using the By locator: " + e.getMessage());
+			Assert.fail("Unable to click on the element using the By locator: " + "<" + element.toString() + ">");
+		}
+	}
+
 	public static String returnDateStamp(String fileExtension) {
 		Date d = new Date();
 		String date = d.toString().replace(":", "_").replace(" ", "_") + fileExtension;
