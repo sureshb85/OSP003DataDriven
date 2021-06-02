@@ -14,7 +14,7 @@ import com.framework.datadriven.utils.CSVDataReader;
 
 public class HomeTestCSVData extends BaseTest {
 
-	@Test(groups = "regression", enabled = true, dataProvider = "csvSignUpData", description = "Sign up test case validation with data provider")
+	@Test(groups = {"regression"}, enabled = true, dataProvider = "csvSignUpData", description = "Sign up test case validation with data provider")
 	public void signUpDataProviderTest(Map<String, String> testData) throws IOException {
 		// System.out.println("new user sign up");
 		HomePage homePage = new HomePage(driver);

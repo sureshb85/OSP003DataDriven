@@ -11,7 +11,7 @@ import com.framework.datadriven.utils.XLSReader;
 
 public class HomeTestExcelData extends BaseTest {
 
-	@Test(groups = "smoke", enabled = true, dataProvider = "xlsSignUpData", description = "Sign up test case validation with data provider")
+	@Test(groups = {"smoke"}, enabled = true, dataProvider = "xlsSignUpData", description = "Sign up test case validation with data provider")
 	public void signUpDataProviderTest(String firstNameData, String lastNameData, String emailData, String phoneData,
 			String address1Data, String address2Data, String cityData, String stateData, String zipData,
 			String countryData) throws IOException {

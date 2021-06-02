@@ -10,7 +10,7 @@ import com.aventstack.extentreports.Status;
 import com.framework.datadriven.pages.HomePage;
 
 public class HomeTest extends BaseTest {
-	@Test(groups = "smoke", enabled = true, description = "title test case validation")
+	@Test(groups = {"smoke"}, enabled = true, description = "title test case validation")
 	public void validateTitle() {
 		// System.out.println("validating application title");
 		logger.log(Status.INFO, "validating application title");
@@ -20,7 +20,7 @@ public class HomeTest extends BaseTest {
 		Assert.assertEquals(actualTitle, "JPetStore Demo1");
 	}
 
-	@Test(groups = "smoke", enabled = true, description = "sign in test case validation")
+	@Test(groups = {"smoke"}, enabled = true, description = "sign in test case validation")
 	public void signInTest() {
 		// System.out.println("clicking on sign in link");
 		logger.log(Status.INFO, "clicking on sign in link");
@@ -28,7 +28,7 @@ public class HomeTest extends BaseTest {
 		homePage.login();
 	}
 
-	@Test(groups = "regression", enabled = true, description = "new user sign up test case validation without data provider")
+	@Test(groups = {"regression"}, enabled = true, description = "new user sign up test case validation without data provider")
 	public void signUpTest() {
 		logger.log(Status.INFO, "new user sign up");
 		// System.out.println("new user sign up");
@@ -36,7 +36,7 @@ public class HomeTest extends BaseTest {
 		homePage.signUp();
 	}
 
-	@Test(groups = "regression", enabled = true, dataProvider = "testData", description = "Sign up test case validation with data provider")
+	@Test(groups = {"regression"}, enabled = true, dataProvider = "testData", description = "Sign up test case validation with data provider")
 	public void signUpDataProviderTest(String firstNameData, String lastNameData, String emailData, String phoneData,
 			String address1Data, String address2Data, String cityData, String stateData, String zipData,
 			String countryData) throws IOException {

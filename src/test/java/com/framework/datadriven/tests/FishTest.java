@@ -8,7 +8,7 @@ import com.framework.datadriven.pages.ShoppingCartPage;
 
 public class FishTest extends BaseTest {
 
-	@Test(description = "add large angle fish test")
+	@Test(groups= {"smoke"},description = "add large angle fish test")
 	public void addLargeAngelFishTest() {
 		FishPage fishPage = new FishPage(driver);
 		fishPage.addLargeAngelFish();

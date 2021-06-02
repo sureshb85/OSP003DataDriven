@@ -7,7 +7,7 @@ import com.framework.datadriven.pages.DogPage;
 import com.framework.datadriven.pages.ShoppingCartPage;
 
 public class DogTest extends BaseTest {
-	@Test(description = "add bull dog test")
+	@Test(groups= {"smoke"},description = "add bull dog test")
 	public void addBullDogTest() {
 		DogPage dogPage = new DogPage(driver);
 		dogPage.addBullDog();

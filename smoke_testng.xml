@@ -11,8 +11,7 @@
 		<classes>
 			<class name="com.framework.datadriven.tests.HomeTest" />
 			<class name="com.framework.datadriven.tests.HomeTestExcelData" />
-			<class
-				name="com.framework.datadriven.tests.HomeTestExcelDataMapExample" />
+			<class name="com.framework.datadriven.tests.HomeTestExcelDataMapExample" />
 			<class name="com.framework.datadriven.utils.XMLSeleniumTest" />
 			<class name="com.framework.datadriven.tests.HomeTestCSVData" />
 			<class name="com.framework.datadriven.tests.FishTest" />
