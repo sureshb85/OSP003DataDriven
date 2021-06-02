@@ -28,7 +28,7 @@ public class BaseTest {
 	public WebDriver driver = null;
 	private static Duration timeoutSeconds = Duration.ofSeconds(15);
 
-	@BeforeMethod
+	@BeforeMethod(groups = { "smoke", "regression" })
 	// Java reflection api
 	public void startTest(Method method) {
 		BrowserFactory browserFactory = new BrowserFactory();
@@ -42,7 +42,7 @@ public class BaseTest {
 		// driver.manage().window().fullscreen();
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = { "smoke", "regression" })
 	public void closeTest(ITestResult result) throws IOException {
 		if (result.getStatus() == 2) {
 			logger.fail(result.getThrowable(),
