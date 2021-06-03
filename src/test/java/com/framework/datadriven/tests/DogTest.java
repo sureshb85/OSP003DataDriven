@@ -15,4 +15,13 @@ public class DogTest extends BaseTest {
 		String title = sc.verifyTitle();
 		Assert.assertEquals(title, "Shopping Cart");
 	}
+	
+	@Test(groups= {"smoke", "regression"},description = "add bull dog test2")
+	public void addBullDogTest2() {
+		DogPage dogPage = new DogPage(driver);
+		dogPage.addBullDog();
+		ShoppingCartPage sc = new ShoppingCartPage(driver);
+		String title = sc.verifyTitle();
+		Assert.assertEquals(title, "Shopping Cart");
+	}
 }
