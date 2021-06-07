@@ -1,6 +1,6 @@
-# Foobar
+# MakeMyTrip
 
-Foobar is a Python library for dealing with word pluralization.
+MakeMyTrip is an Indian online travel company founded in 2000. Headquartered in Gurugram, Haryana, the company provides online travel services including flight tickets, domestic and international holiday packages, hotel reservations, rail, and bus tickets. 
 
 ## Installation
 
@@ -10,14 +10,15 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 pip install foobar
 ```
 
-## Usage
+## Usage - Basepage
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```Java
+public BasePage(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new FluentWait<WebDriver>(driver).withTimeout(timeoutSeconds).pollingEvery(pollingSeconds)
+				.withMessage("Timeout occured!")
+				.ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
+	}
 ```
 
 ## Contributing
