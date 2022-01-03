@@ -15,4 +15,7 @@ public class ShoppingCartPage extends BasePage {
 		return getText(By.xpath(title));
 	}
 
+	public void checkoutCart() {
+
+	}
 }

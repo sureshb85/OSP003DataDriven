@@ -24,4 +24,5 @@ public class BirdsTest extends BaseTest {
 		BirdsPage birdsTest = new BirdsPage(driver);
 		birdsTest.clickFinch();
 	}
+
 }
