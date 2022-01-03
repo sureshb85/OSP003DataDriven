@@ -22,7 +22,7 @@ public class BasePage {
 
 	WebDriver driver = null;
 	Wait<WebDriver> wait = null;
-	private static Duration timeoutSeconds = Duration.ofSeconds(30);
+	private static Duration timeoutSeconds = Duration.ofSeconds(15);
 	private static Duration pollingSeconds = Duration.ofSeconds(4);
 
 	public BasePage(WebDriver driver) {

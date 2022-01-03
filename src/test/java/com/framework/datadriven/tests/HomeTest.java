@@ -10,7 +10,7 @@ import com.aventstack.extentreports.Status;
 import com.framework.datadriven.pages.HomePage;
 
 public class HomeTest extends BaseTest {
-	@Test(groups = {"smoke"}, enabled = true, description = "title test case validation")
+	@Test(groups = { "smoke" }, enabled = false, description = "title test case validation")
 	public void validateTitle() {
 		// System.out.println("validating application title");
 		logger.log(Status.INFO, "validating application title");
@@ -20,7 +20,7 @@ public class HomeTest extends BaseTest {
 		Assert.assertEquals(actualTitle, "JPetStore Demo1");
 	}
 
-	@Test(groups = {"smoke"}, enabled = true, description = "sign in test case validation")
+	@Test(groups = { "smoke" }, enabled = false, description = "sign in test case validation")
 	public void signInTest() {
 		// System.out.println("clicking on sign in link");
 		logger.log(Status.INFO, "clicking on sign in link");
@@ -28,7 +28,8 @@ public class HomeTest extends BaseTest {
 		homePage.login();
 	}
 
-	@Test(groups = {"regression"}, enabled = true, description = "new user sign up test case validation without data provider")
+	@Test(groups = {
+			"regression" }, enabled = false, description = "new user sign up test case validation without data provider")
 	public void signUpTest() {
 		logger.log(Status.INFO, "new user sign up");
 		// System.out.println("new user sign up");
@@ -36,7 +37,8 @@ public class HomeTest extends BaseTest {
 		homePage.signUp();
 	}
 
-	@Test(groups = {"regression"}, enabled = true, dataProvider = "testData", description = "Sign up test case validation with data provider")
+	@Test(groups = {
+			"regression" }, enabled = true, dataProvider = "testData", description = "Sign up test case validation with data provider")
 	public void signUpDataProviderTest(String firstNameData, String lastNameData, String emailData, String phoneData,
 			String address1Data, String address2Data, String cityData, String stateData, String zipData,
 			String countryData) throws IOException {
@@ -51,7 +53,7 @@ public class HomeTest extends BaseTest {
 	@DataProvider
 	public Object[][] testData() {
 		Object[][] data = new Object[2][10];
-		data[0][0] = "John";
+		data[0][0] = "John A";
 		data[0][1] = "Peter";
 		data[0][2] = "rama@gmail.com";
 		data[0][3] = "9845012345";
@@ -62,7 +64,7 @@ public class HomeTest extends BaseTest {
 		data[0][8] = "560103";
 		data[0][9] = "India";
 
-		data[1][0] = "Rama";
+		data[1][0] = "Rama A";
 		data[1][1] = "Krishna";
 		data[1][2] = "rama@yahoo.com";
 		data[1][3] = "9845012786";

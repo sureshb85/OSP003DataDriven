@@ -8,12 +8,12 @@ import com.framework.datadriven.pages.ShoppingCartPage;
 
 public class FishTest extends BaseTest {
 
-	@Test(groups= {"smoke"},description = "add large angle fish test")
+	@Test(groups = { "smoke" }, description = "add large angle fish test")
 	public void addLargeAngelFishTest() {
 		FishPage fishPage = new FishPage(driver);
 		fishPage.addLargeAngelFish();
 		ShoppingCartPage sc = new ShoppingCartPage(driver);
-		String title = sc.verifyTitle();
+		String title = sc.VerifyHeader();
 		Assert.assertEquals(title, "Shopping Cart");
 	}
 

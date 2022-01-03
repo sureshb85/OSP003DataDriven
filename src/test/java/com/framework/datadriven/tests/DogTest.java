@@ -12,7 +12,7 @@ public class DogTest extends BaseTest {
 		DogPage dogPage = new DogPage(driver);
 		dogPage.addBullDog();
 		ShoppingCartPage sc = new ShoppingCartPage(driver);
-		String title = sc.verifyTitle();
+		String title = sc.VerifyHeader();
 		Assert.assertEquals(title, "Shopping Cart");
 	}
 }

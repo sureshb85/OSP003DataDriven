@@ -46,6 +46,8 @@ public class HomePage extends BasePage {
 		sendKeysToWebElement(By.name(passwordTxt), "Suresh85");
 		// click login button
 		waitAndClickElement(By.name(loginBtn));
+		
+		// whether login is success or not
 	}
 
 	public void signUp() {

@@ -11,7 +11,7 @@ public class ShoppingCartPage extends BasePage {
 
 	String title = "//*[@id='Cart']/h2";
 
-	public String verifyTitle() {
+	public String VerifyHeader() {
 		return getText(By.xpath(title));
 	}
 
